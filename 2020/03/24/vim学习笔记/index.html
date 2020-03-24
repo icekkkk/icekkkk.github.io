@@ -7,25 +7,28 @@
 <head>
   <meta charset="utf-8">
   
-  <title>arch-linux问题解决方案 | icek&#39;s blog</title>
+  <title>vim学习笔记 | icek&#39;s blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="archlinux 问题解决," />
+    <meta name="keywords" content="生活 点滴 HACKER ARCH LINUX 极简" />
   
 
-  <meta name="description" content="解决QQ运行问题解决方案‘yaourt -S gnome-settings-daemon’然后运行’ &#x2F;usr&#x2F;lib&#x2F;gsd-xsettings ‘或者后台运行’ nohup &#x2F;usr&#x2F;lib&#x2F;gsd-xsettings &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp; ‘切换到对应目录’ cd &#x2F;opt&#x2F;deepinwine&#x2F;apps&#x2F;Deepin-TIM ‘ 或者’ &#x2F;opt">
+  <meta name="description" content="vim学习笔记 记录一点小知识，以便回顾  基础设置 :vs 水平分屏 :sp 垂直分屏 control + w\h\j\k\l在窗口间循环切换 :e 打开新文件 :set nu 设置行号(可以在配置文件中设置好) :%s&#x2F;java&#x2F;python&#x2F;g 全局替换 :syntax on 设置语法高亮 :set autoindex 设置补全缩进移动 w&#x2F;W 移动到下一个字母头 e&#x2F;E 移动到下一个字母尾">
 <meta property="og:type" content="article">
-<meta property="og:title" content="arch-linux问题解决方案">
-<meta property="og:url" content="http://yoursite.com/2020/03/23/arch-linux%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
+<meta property="og:title" content="vim学习笔记">
+<meta property="og:url" content="http://yoursite.com/2020/03/24/vim%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="icek&#39;s blog">
-<meta property="og:description" content="解决QQ运行问题解决方案‘yaourt -S gnome-settings-daemon’然后运行’ &#x2F;usr&#x2F;lib&#x2F;gsd-xsettings ‘或者后台运行’ nohup &#x2F;usr&#x2F;lib&#x2F;gsd-xsettings &gt; &#x2F;dev&#x2F;null 2&gt;&amp;1 &amp; ‘切换到对应目录’ cd &#x2F;opt&#x2F;deepinwine&#x2F;apps&#x2F;Deepin-TIM ‘ 或者’ &#x2F;opt">
+<meta property="og:description" content="vim学习笔记 记录一点小知识，以便回顾  基础设置 :vs 水平分屏 :sp 垂直分屏 control + w\h\j\k\l在窗口间循环切换 :e 打开新文件 :set nu 设置行号(可以在配置文件中设置好) :%s&#x2F;java&#x2F;python&#x2F;g 全局替换 :syntax on 设置语法高亮 :set autoindex 设置补全缩进移动 w&#x2F;W 移动到下一个字母头 e&#x2F;E 移动到下一个字母尾">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-03-23T12:42:03.000Z">
-<meta property="article:modified_time" content="2020-03-23T12:50:31.767Z">
+<meta property="article:published_time" content="2020-03-24T02:25:21.000Z">
+<meta property="article:modified_time" content="2020-03-24T02:44:29.808Z">
 <meta property="article:author" content="icek">
-<meta property="article:tag" content="archlinux 问题解决">
+<meta property="article:tag" content="pen">
+<meta property="article:tag" content=" notes">
+<meta property="article:tag" content=" coding">
+<meta property="article:tag" content=" developer">
 <meta name="twitter:card" content="summary">
 
   
@@ -176,20 +179,20 @@ ga('send', 'pageview');
 
   <div id="toc" class="toc-article">
     <strong class="toc-title">Posts List</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#解决QQ运行问题"><span class="toc-text">解决QQ运行问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决蜂鸣器问题"><span class="toc-text">解决蜂鸣器问题</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#解决亮度调节问题"><span class="toc-text">解决亮度调节问题</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#vim学习笔记"><span class="toc-text">vim学习笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#基础设置"><span class="toc-text">基础设置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#移动"><span class="toc-text">移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#快速增删改查"><span class="toc-text">快速增删改查</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#插入模式下快捷命令"><span class="toc-text">插入模式下快捷命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#行间移动"><span class="toc-text">行间移动</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim-替换命令"><span class="toc-text">vim 替换命令</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#vim-复制粘贴"><span class="toc-text">vim 复制粘贴</span></a></li></ol></li></ol>
   </div>
 
 
 
 <div class="content content-post CENTER">
-   <article id="post-arch-linux问题解决方案" class="article article-type-post" itemprop="blogPost">
+   <article id="post-vim学习笔记" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
-    <h1 class="post-title">arch-linux问题解决方案</h1>
+    <h1 class="post-title">vim学习笔记</h1>
 
     <div class="article-meta">
       <span>
         <i class="icon-calendar"></i>
-        <span>2020.03.23</span>
+        <span>2020.03.24</span>
       </span>
 
       
@@ -200,11 +203,6 @@ ga('send', 'pageview');
       
 
       
-  <span class="article-category">
-    <i class="icon-list"></i>
-    <a class="article-category-link" href="/categories/%E9%97%AE%E9%A2%98%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/">问题解决方案</a>
-  </span>
-
 
 
       
@@ -222,9 +220,60 @@ ga('send', 'pageview');
 
   <div class="article-content">
     
-      <h1 id="解决QQ运行问题"><a href="#解决QQ运行问题" class="headerlink" title="解决QQ运行问题"></a>解决QQ运行问题</h1><p>解决方案<br>‘yaourt -S gnome-settings-daemon’<br>然后运行’ /usr/lib/gsd-xsettings ‘或者后台运行’ nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp; ‘<br>切换到对应目录’ cd /opt/deepinwine/apps/Deepin-TIM ‘ 或者’ /opt/deepinwine/apps/Deepin-QQ’或者’ /opt/deepinwine/apps/Deepin-Wechat ‘<br>运行’ ./run.sh ‘<br>完美解决！参见 github，然后可以将第二步添加到 i3 的启动项即可。（笔者直接在.bashrc文件里添加’ nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp; ‘）</p>
-<h1 id="解决蜂鸣器问题"><a href="#解决蜂鸣器问题" class="headerlink" title="解决蜂鸣器问题"></a>解决蜂鸣器问题</h1><p>‘ xset -b ‘</p>
-<h1 id="解决亮度调节问题"><a href="#解决亮度调节问题" class="headerlink" title="解决亮度调节问题"></a>解决亮度调节问题</h1><p>安装 ACPI 的亮度控制，替换原 xbacklight 命令<br>‘ sudo pacman -S acpilight ‘<br>将当前用户加入 video 组，实现免 root 控制亮度<br>‘ sudo gpasswd video -a cycoe ‘<br>acpilight 兼容 xbacklight 重启之后就可以通过下面命令控制亮度了<br><strong>Get backlight brightness</strong><br>‘ xbacklight -get ‘<br><strong>Set brightness</strong><br>‘ xbacklight -set 70 ‘<br><strong>Increase brightness</strong><br>‘ xbacklight -inc 10 ‘<br><strong>Decrease brightness</strong><br>‘ xbacklight -dec 10 ‘</p>
+      <h1 id="vim学习笔记"><a href="#vim学习笔记" class="headerlink" title="vim学习笔记"></a>vim学习笔记</h1><blockquote>
+<p>记录一点小知识，以便回顾</p>
+</blockquote>
+<h2 id="基础设置"><a href="#基础设置" class="headerlink" title="基础设置"></a>基础设置</h2><ul>
+<li>:vs 水平分屏</li>
+<li>:sp 垂直分屏</li>
+<li>control + w\h\j\k\l在窗口间循环切换</li>
+<li>:e 打开新文件</li>
+<li>:set nu 设置行号(可以在配置文件中设置好)</li>
+<li>:%s/java/python/g 全局替换</li>
+<li>:syntax on 设置语法高亮</li>
+<li>:set autoindex 设置补全缩进<h2 id="移动"><a href="#移动" class="headerlink" title="移动"></a>移动</h2></li>
+<li>w/W 移动到下一个字母头</li>
+<li>e/E 移动到下一个字母尾</li>
+<li>0 移动到地一个字符</li>
+<li><code>$</code> 移动到最后一个字符</li>
+<li>control + o 快速返回</li>
+<li>control + u\f 上下翻页</li>
+<li>zz 把屏幕放在中间<h2 id="快速增删改查"><a href="#快速增删改查" class="headerlink" title="快速增删改查"></a>快速增删改查</h2></li>
+<li>dw，daw(delete around word 删除包含空格)，diw(删除不包含空格) 删除单词</li>
+<li>dt+{char} 删除直到{char}之前的内容</li>
+<li>数字+命令 多次重复</li>
+<li>r (replace) R继续往下替换</li>
+<li>c(change) caw 匹配字符删除并进入插入模式</li>
+<li>s(substitute) 删除并进入插入模式</li>
+<li>查询</li>
+<li>/ ? 前向搜索或反向搜索</li>
+<li>n/N 跳转下个或上个</li>
+<li>I 头插入</li>
+<li>A 尾插入<h2 id="插入模式下快捷命令"><a href="#插入模式下快捷命令" class="headerlink" title="插入模式下快捷命令"></a>插入模式下快捷命令</h2></li>
+<li>control + h 删除上个字符</li>
+<li>control + w 删除上个单词</li>
+<li>control + u 删除整行</li>
+<li>gi 回到上次编辑的插入模式<h2 id="行间移动"><a href="#行间移动" class="headerlink" title="行间移动"></a>行间移动</h2></li>
+<li>f+{char} 移动到char字符</li>
+<li>t(until)+{char} 移动到char前一个字符</li>
+<li>; 搜下下个</li>
+<li>， 搜索上个</li>
+<li>跳转到某行</li>
+<li>ngg或nG ,其中n代表数字</li>
+<li>例如跳到25行</li>
+<li>25gg 25G</li>
+<li>命令模式下输入行号</li>
+<li>: n<h2 id="vim-替换命令"><a href="#vim-替换命令" class="headerlink" title="vim 替换命令"></a>vim 替换命令</h2></li>
+<li>:[range]s/{pattern}/{string}/[flag]</li>
+<li>:% s/self/this/g</li>
+<li>% 代表全部，替换self为this</li>
+<li>:1,6 s/self/this/g</li>
+<li>1-6行范围文本替换</li>
+<li>:1,6 s/self//n</li>
+<li>报告1～6行匹配数量<h2 id="vim-复制粘贴"><a href="#vim-复制粘贴" class="headerlink" title="vim 复制粘贴"></a>vim 复制粘贴</h2></li>
+<li>代码行数错位， :set paste</li>
+<li>之后 :set nopaste 否则o插入时不会自动缩进</li>
+</ul>
 
     
   </div>
@@ -236,10 +285,10 @@ ga('send', 'pageview');
 
    
   <div class="box-prev-next clearfix">
-    <a class="show pull-left" href="/2020/03/22/%E6%9D%82%E8%AE%B0-%E6%9D%A8%E6%9F%B3%E4%BE%9D%E4%BE%9D/">
+    <a class="show pull-left" href="/2020/03/23/mkdown%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/">
         <i class="icon icon-angle-left"></i>
     </a>
-    <a class="show pull-right" href="/2020/03/23/mkdown%E8%AF%AD%E6%B3%95%E7%9F%A5%E8%AF%86/">
+    <a class="show pull-right" href="/2020/03/24/%E6%9D%82%E8%AE%B0-%E5%8D%81%E5%B9%B4%E9%A5%AE%E5%86%B0/">
         <i class="icon icon-angle-right"></i>
     </a>
   </div>
