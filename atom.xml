@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-26T09:55:08.634Z</updated>
+  <updated>2020-03-27T08:05:28.877Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>web backup</title>
+    <link href="http://yoursite.com/2020/03/27/web-backup/"/>
+    <id>http://yoursite.com/2020/03/27/web-backup/</id>
+    <published>2020-03-27T07:48:00.000Z</published>
+    <updated>2020-03-27T08:05:28.877Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="一些大佬的博客"><a href="#一些大佬的博客" class="headerlink" title="一些大佬的博客"></a>一些大佬的博客</h1><ul><li><a href="https://www.waitalone.cn/" target="_blank" rel="noopener">https://www.waitalone.cn/</a> 独自等待 web安全</li><li><a href="http://wiki.ioin.in/" target="_blank" rel="noopener">http://wiki.ioin.in/</a> ioin web安全</li><li><a href="http://avfisher.win/" target="_blank" rel="noopener">http://avfisher.win/</a> 安全小飞侠 web安全</li><li><a href="https://www.leavesongs.com/" target="_blank" rel="noopener">https://www.leavesongs.com/</a> 离别歌 web安全<h1 id="一些优秀的站点"><a href="#一些优秀的站点" class="headerlink" title="一些优秀的站点"></a>一些优秀的站点</h1></li><li><a href="https://wallhaven.cc/" target="_blank" rel="noopener">https://wallhaven.cc/</a> 高清壁纸站点</li></ul><p><img src="/images/%E5%A4%87%E4%BB%BD/1.jpg" alt="*"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="备份" scheme="http://yoursite.com/categories/%E5%A4%87%E4%BB%BD/"/>
+    
+    
+      <category term="备份" scheme="http://yoursite.com/tags/%E5%A4%87%E4%BB%BD/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>杂记-BADCODE</title>
+    <link href="http://yoursite.com/2020/03/27/%E6%9D%82%E8%AE%B0-BADCODE/"/>
+    <id>http://yoursite.com/2020/03/27/%E6%9D%82%E8%AE%B0-BADCODE/</id>
+    <published>2020-03-27T07:37:43.000Z</published>
+    <updated>2020-03-27T08:06:12.867Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><ul><li><p>所有的愤怒都是源于自己的无能为力</p></li><li><p>所有的失败都是源于自己的懒惰</p></li><li><p>凡事三思，思而后行</p></li><li><p>保持清醒，保持简单</p></li><li><p>无关时事，只谈风月</p></li></ul><p><img src="/images/%E6%9D%82%E8%AE%B0-BADCODE/1.jpg" alt="*"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="杂记" scheme="http://yoursite.com/categories/%E6%9D%82%E8%AE%B0/"/>
+    
+    
+      <category term="杂记 闲谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%AE%B0-%E9%97%B2%E8%B0%88/"/>
+    
+  </entry>
   
   <entry>
     <title>世界史-01</title>
