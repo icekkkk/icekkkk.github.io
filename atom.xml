@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-28T09:28:11.229Z</updated>
+  <updated>2020-03-28T09:54:26.046Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>leetcode-01</title>
+    <link href="http://yoursite.com/2020/03/28/leetcode-01/"/>
+    <id>http://yoursite.com/2020/03/28/leetcode-01/</id>
+    <published>2020-03-28T09:35:14.000Z</published>
+    <updated>2020-03-28T09:54:26.046Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p></blockquote><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>题解的思路是找到数的关系 nums[0]=target-nums[1] nums[0]在target中，返回ture</p><pre><code>def twoSum (nums,target):    lens = len(nums)    j = -1     for i in range(lens):        if (nums.count(target - nums[i]) == 1) &amp; (target - nums[i] == nums[i]):             countinue        else:            j = nums.index(target - nums[i],i+1)            break    if j &gt; 0:        return [i,j]    else:        return []def twoSum(nums, target):    hashmap={}    for i,num in enumerate(nums):        if hashmap.get(target - num) is not None:            return [i,hashmap.get(target - num)]        hashmap[num] = i #这句不能放在if语句之前，解决list中有重复值或target-num=num的情况</code></pre><ul><li>index(x,x+1)是从num1后的序列后找num2</li><li>耗时长1636s 耗时70s</li><li>参考了大神们的解法，通过哈希来求解，这里通过字典来模拟哈希查询的过程。</li><li>个人理解这种办法相较于方法一其实就是字典记录了 num1 和 num2 的值和位置，而省了再查找 num2 索引的步骤</li></ul><pre><code>def twoSum(nums, target):    hashmap={}    for ind,num in enumerate(nums):        hashmap[num] = ind    for i,num in enumerate(nums):        j = hashmap.get(target - num)        if j is not None and i!=j:            return [i,j]</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="leetcode python" scheme="http://yoursite.com/categories/leetcode-python/"/>
+    
+    
+      <category term="leetcode python" scheme="http://yoursite.com/tags/leetcode-python/"/>
+    
+  </entry>
   
   <entry>
     <title>深入理解linux内核</title>
@@ -485,32 +511,6 @@
     
     
       <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>杂记-十年饮冰</title>
-    <link href="http://yoursite.com/2020/03/24/%E6%9D%82%E8%AE%B0-%E5%8D%81%E5%B9%B4%E9%A5%AE%E5%86%B0/"/>
-    <id>http://yoursite.com/2020/03/24/%E6%9D%82%E8%AE%B0-%E5%8D%81%E5%B9%B4%E9%A5%AE%E5%86%B0/</id>
-    <published>2020-03-24T04:07:22.000Z</published>
-    <updated>2020-03-28T09:23:30.729Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="十年饮冰，难凉热血"><a href="#十年饮冰，难凉热血" class="headerlink" title=" 十年饮冰，难凉热血"></a><center> 十年饮冰，难凉热血</center></h1><h2 id="计划清单-菜鸟教程"><a href="#计划清单-菜鸟教程" class="headerlink" title=" 计划清单(菜鸟教程)"></a><center> 计划清单(菜鸟教程)</center></h2><table><thead><tr><th>计划清单</th><th align="center">技能</th></tr></thead><tbody><tr><td>1</td><td align="center">python</td></tr><tr><td>2</td><td align="center">c</td></tr><tr><td>3</td><td align="center">html</td></tr><tr><td>4</td><td align="center">linux</td></tr><tr><td>5</td><td align="center">正则</td></tr><tr><td>6</td><td align="center">css</td></tr><tr><td>7</td><td align="center">mysql</td></tr><tr><td>8</td><td align="center">30天制作操作系统</td></tr><tr><td>9</td><td align="center">世界史前沿论文一篇</td></tr><tr><td>10</td><td align="center">深入理解linux内核</td></tr></tbody></table><h2 id="唯有梦想不可辜负"><a href="#唯有梦想不可辜负" class="headerlink" title=" 唯有梦想不可辜负"></a><center> 唯有梦想不可辜负</center></h2><p><img src="/images/%E6%9D%82%E8%AE%B0-%E5%8D%81%E5%B9%B4%E9%A5%AE%E5%86%B0/1.jpg" alt="*"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="杂记" scheme="http://yoursite.com/categories/%E6%9D%82%E8%AE%B0/"/>
-    
-    
-      <category term="杂记 闲谈" scheme="http://yoursite.com/tags/%E6%9D%82%E8%AE%B0-%E9%97%B2%E8%B0%88/"/>
     
   </entry>
   
