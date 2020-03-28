@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-28T01:38:09.215Z</updated>
+  <updated>2020-03-28T01:44:28.045Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>arch安装步骤</title>
     <link href="http://yoursite.com/2020/03/28/arch%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/"/>
     <id>http://yoursite.com/2020/03/28/arch%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/</id>
-    <published>2020-03-28T01:38:09.215Z</published>
-    <updated>2020-03-28T01:38:09.215Z</updated>
+    <published>2020-03-28T00:21:48.000Z</published>
+    <updated>2020-03-28T01:44:28.045Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><hr><p>title: arch安装步骤<br>date: 2020-03-28 08:21:48<br>tags:<br>category:</p><hr><h1 id="我的arch安装步骤"><a href="#我的arch安装步骤" class="headerlink" title="我的arch安装步骤"></a>我的arch安装步骤</h1><ul><li>下载镜像</li><li>用dd写入u盘 <code>dd if = arch.iso of = /dev/sdx</code></li><li>F12</li><li>联网wifi-menu<blockquote><p>联想笔记本的wifi默认是锁的所以要先打开，不然会连接失败</p></blockquote></li><li>rkill list查看</li><li>rkill unblock all 干掉所有软件的block</li><li>wifi-menu 联网</li><li>可以选择一个安装字体 setfont /usr/share/kbd/consolefonts//LatGrkCyr-12x22.psfu.gz</li><li>分区 fdisk -l 查看硬盘</li><li>分区 fdisk /dev/sdx <blockquote><p>p 打印分区<br>g 创建新的分区列表，w保存才写入硬盘<br>n 创建分区 1 创建第一个分区 50G分区大小 Y 去除原格式创建新的磁盘格式<br>mkfs.fat -F32 /dev/sdx 引导分区格式化<br>mkfs.ext4 /dev/sdb 主分区格式<br>mkswap /dev/sdx swap分区<br>swapon /dev/sdx 打开swap分区</p></blockquote></li><li>vim /etc/pacman.conf <blockquote><p>/Color 更换安装字体颜色</p></blockquote></li><li>vim /etc/pacman.d/mirrorlist </li><li>mount /dev/sdx /mnt 挂在到住分区</li><li>mkdir /mnt/boot</li><li>moubt /dev/sdx /mnt/boot 挂载引导分区</li><li>pacstrap /mnt base linux linux-firmware linux内核框架</li><li>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab 生成开机引导设备</li><li>arch-chroot /mnt 进入安装系统</li><li>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 调整时间</li><li>hwclock –systohc 同步系统时间</li><li>exit</li><li>vim /mnt/etc/locale.gen 找enus</li><li>arch-chroot /mnt</li><li>locale-gen 本地化</li><li>exit</li><li>vim /mnt/etc/locale.com 写入 LANG=en_US.UTF-8</li><li>vim /mnt/etc/hostname 写入 icek</li><li>vim /mnt/etc/hosts 写入<blockquote><p>127.0.0.1 localhost<br>::1 localhost<br>127.0.0.1 icek.localdomain icek</p></blockquote></li><li>arch-chroot /mnt</li><li>passwd 创建密码</li><li>pacman -S grub efibootmgr intel-ucode os-prober</li><li>mkdir /boot/grub</li><li>grub-mkconfig &gt; /boot/grub/grub.cfg 生成grub配置文件</li><li>uname -m 确认系统架构</li><li>grub-install –target=x86_64-efi –efi-directory=/boot </li><li>pacman -S vim zsh dhcp wpa_supplicant 安装完成重启</li><li>还有一个包是wifi-menu的也要安装</li></ul>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="我的arch安装步骤"><a href="#我的arch安装步骤" class="headerlink" title="我的arch安装步骤"></a>我的arch安装步骤</h1><p><strong>更新于202003安装以arch官方为准</strong></p><ul><li>下载镜像</li><li>用dd写入u盘 <code>dd if = arch.iso of = /dev/sdx</code></li><li>F12</li><li>联网<code>wifi-menu</code><blockquote><p>联想笔记本的wifi默认是锁的所以要先打开，不然会连接失败</p></blockquote></li><li><code>rkill list</code>查看</li><li><code>rkill unblock all</code> 干掉所有软件的block</li><li><code>wifi-menu</code> 联网</li><li>可以选择一个安装字体 <code>setfont /usr/share/kbd/consolefonts//LatGrkCyr-12x22.psfu.gz</code></li><li>分区 <code>fdisk -l</code> 查看硬盘</li><li>分区 <code>fdisk /dev/sdx</code> <blockquote><p>p 打印分区<br>g 创建新的分区列表，w保存才写入硬盘<br>n 创建分区 1 创建第一个分区 50G分区大小 Y 去除原格式创建新的磁盘格式<br><code>mkfs.fat -F32 /dev/sdx</code> 引导分区格式化<br><code>mkfs.ext4 /dev/sdb</code> 主分区格式<br><code>mkswap /dev/sdx</code> swap分区<br><code>swapon /dev/sdx</code> 打开swap分区</p></blockquote></li><li><code>vim /etc/pacman.conf</code><blockquote><p>/Color 更换安装字体颜色</p></blockquote></li><li><code>vim /etc/pacman.d/mirrorlist</code> </li><li><code>mount /dev/sdx /mnt</code> 挂在到住分区</li><li><code>mkdir /mnt/boot</code></li><li><code>moubt /dev/sdx /mnt/boot</code> 挂载引导分区</li><li><code>pacstrap /mnt base linux linux-firmware</code> linux内核框架</li><li><code>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab</code> 生成开机引导设备</li><li><code>arch-chroot /mnt</code> 进入安装系统</li><li><code>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code> 调整时间</li><li><code>hwclock --systohc</code> 同步系统时间</li><li><code>exit</code></li><li><code>vim /mnt/etc/locale.gen</code> 找enus</li><li><code>arch-chroot /mnt</code></li><li><code>locale-gen</code> 本地化</li><li><code>exit</code></li><li><code>vim /mnt/etc/locale.com</code> 写入<code>LANG=en_US.UTF-8</code></li><li><code>vim /mnt/etc/hostname</code> 写入 <code>icek</code></li><li><code>vim /mnt/etc/hosts</code> 写入<blockquote><p>127.0.0.1 localhost<br>::1 localhost<br>127.0.0.1 icek.localdomain icek</p></blockquote></li><li><code>arch-chroot /mnt</code></li><li><code>passwd</code> 创建密码</li><li><code>pacman -S grub efibootmgr intel-ucode os-prober</code></li><li><code>mkdir /boot/grub</code></li><li><code>grub-mkconfig &gt; /boot/grub/grub.cfg</code> 生成grub配置文件</li><li><code>uname -m</code> 确认系统架构</li><li><code>grub-install --target=x86_64-efi --efi-directory=/boot</code></li><li><code>pacman -S vim zsh dhcp wpa_supplicant</code> 安装完成重启</li><li>还有一个包是wifi-menu的也要安装</li></ul>]]></content>
     
     <summary type="html">
     
@@ -35,6 +35,10 @@
     </summary>
     
     
+      <category term="arch" scheme="http://yoursite.com/categories/arch/"/>
+    
+    
+      <category term="arch安装 arch" scheme="http://yoursite.com/tags/arch%E5%AE%89%E8%A3%85-arch/"/>
     
   </entry>
   
