@@ -63,7 +63,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">222字</span>
+            <span class="post-count">211字</span>
         </span>
     </span>
 
@@ -97,9 +97,9 @@
       
 
       
-      <h1 id="解决QQ运行问题"><a href="#解决QQ运行问题" class="headerlink" title="解决QQ运行问题"></a>解决QQ运行问题</h1><p>解决方案<br>‘yaourt -S gnome-settings-daemon’<br>然后运行’ /usr/lib/gsd-xsettings ‘或者后台运行’ nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp; ‘<br>切换到对应目录’ cd /opt/deepinwine/apps/Deepin-TIM ‘ 或者’ /opt/deepinwine/apps/Deepin-QQ’或者’ /opt/deepinwine/apps/Deepin-Wechat ‘<br>运行’ ./run.sh ‘<br>完美解决！参见 github，然后可以将第二步添加到 i3 的启动项即可。（笔者直接在.bashrc文件里添加’ nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp; ‘）</p>
-<h1 id="解决蜂鸣器问题"><a href="#解决蜂鸣器问题" class="headerlink" title="解决蜂鸣器问题"></a>解决蜂鸣器问题</h1><p>‘ xset -b ‘</p>
-<h1 id="解决亮度调节问题"><a href="#解决亮度调节问题" class="headerlink" title="解决亮度调节问题"></a>解决亮度调节问题</h1><p>安装 ACPI 的亮度控制，替换原 xbacklight 命令<br>‘ sudo pacman -S acpilight ‘<br>将当前用户加入 video 组，实现免 root 控制亮度<br>‘ sudo gpasswd video -a cycoe ‘<br>acpilight 兼容 xbacklight 重启之后就可以通过下面命令控制亮度了<br><strong>Get backlight brightness</strong><br>‘ xbacklight -get ‘<br><strong>Set brightness</strong><br>‘ xbacklight -set 70 ‘<br><strong>Increase brightness</strong><br>‘ xbacklight -inc 10 ‘<br><strong>Decrease brightness</strong><br>‘ xbacklight -dec 10 ‘</p>
+      <h1 id="解决QQ运行问题"><a href="#解决QQ运行问题" class="headerlink" title="解决QQ运行问题"></a>解决QQ运行问题</h1><p>解决方案<br><code>yaourt -S gnome-settings-daemon</code><br>然后运行<code>/usr/lib/gsd-xsettings</code>或者后台运行<code>nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp;</code><br>切换到对应目录<code>cd /opt/deepinwine/apps/Deepin-TIM</code> 或者<code>/opt/deepinwine/apps/Deepin-QQ</code>或者<code>/opt/deepinwine/apps/Deepin-Wechat</code><br>运行<code>./run.sh</code><br>完美解决！参见 github，然后可以将第二步添加到 i3 的启动项即可。（笔者直接在.bashrc文件里添加<code>nohup /usr/lib/gsd-xsettings &gt; /dev/null 2&gt;&amp;1 &amp;</code>）</p>
+<h1 id="解决蜂鸣器问题"><a href="#解决蜂鸣器问题" class="headerlink" title="解决蜂鸣器问题"></a>解决蜂鸣器问题</h1><p><code>xset -b</code></p>
+<h1 id="解决亮度调节问题"><a href="#解决亮度调节问题" class="headerlink" title="解决亮度调节问题"></a>解决亮度调节问题</h1><p> 安装 ACPI 的亮度控制，替换原 xbacklight 命令<br><code>sudo pacman -S acpilight</code><br>将当前用户加入 video 组，实现免 root 控制亮度<br><code>sudo gpasswd video -a cycoe</code><br>acpilight 兼容 xbacklight 重启之后就可以通过下面命令控制亮度了<br><strong>Get backlight brightness</strong><br><code>xbacklight -get</code><br><strong>Set brightness</strong><br><code>xbacklight -set 70</code><br><strong>Increase brightness</strong><br><code>xbacklight -inc 10</code><br><strong>Decrease brightness</strong><br><code>xbacklight -dec 10</code></p>
 
       
       <!-- reward -->
