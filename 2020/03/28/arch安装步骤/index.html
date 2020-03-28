@@ -8,7 +8,7 @@
    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    web backup |  iteod&#39;s blog
+    arch安装步骤 |  iteod&#39;s blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -31,7 +31,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-web-backup" class="article article-type-post" itemscope
+  <article id="post-arch安装步骤" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -39,7 +39,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  web backup
+  arch安装步骤
 </h1>
  
 
@@ -48,14 +48,10 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/27/web-backup/" class="article-date">
-  <time datetime="2020-03-27T07:48:00.000Z" itemprop="datePublished">2020-03-27</time>
+      <a href="/2020/03/28/arch%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" class="article-date">
+  <time datetime="2020-03-28T01:38:09.215Z" itemprop="datePublished">2020-03-28</time>
 </a>
       
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%A4%87%E4%BB%BD/">备份</a>
-  </div>
-
       
       
 <div class="word_count">
@@ -63,7 +59,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">63字</span>
+            <span class="post-count">431字</span>
         </span>
     </span>
 
@@ -72,7 +68,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">2分钟</span>
         </span>
     </span>
 </div>
@@ -97,14 +93,60 @@
       
 
       
-      <h1 id="一些大佬的博客"><a href="#一些大佬的博客" class="headerlink" title="一些大佬的博客"></a>一些大佬的博客</h1><ul>
-<li><a href="https://www.waitalone.cn/" target="_blank" rel="noopener">https://www.waitalone.cn/</a> 独自等待 web安全</li>
-<li><a href="http://wiki.ioin.in/" target="_blank" rel="noopener">http://wiki.ioin.in/</a> ioin web安全</li>
-<li><a href="http://avfisher.win/" target="_blank" rel="noopener">http://avfisher.win/</a> 安全小飞侠 web安全</li>
-<li><a href="https://www.leavesongs.com/" target="_blank" rel="noopener">https://www.leavesongs.com/</a> 离别歌 web安全<h1 id="一些优秀的站点"><a href="#一些优秀的站点" class="headerlink" title="一些优秀的站点"></a>一些优秀的站点</h1></li>
-<li><a href="https://wallhaven.cc/" target="_blank" rel="noopener">https://wallhaven.cc/</a> 高清壁纸站点</li>
+      <hr>
+<p>title: arch安装步骤<br>date: 2020-03-28 08:21:48<br>tags:<br>category:</p>
+<hr>
+<h1 id="我的arch安装步骤"><a href="#我的arch安装步骤" class="headerlink" title="我的arch安装步骤"></a>我的arch安装步骤</h1><ul>
+<li>下载镜像</li>
+<li>用dd写入u盘 <code>dd if = arch.iso of = /dev/sdx</code></li>
+<li>F12</li>
+<li>联网wifi-menu<blockquote>
+<p>联想笔记本的wifi默认是锁的所以要先打开，不然会连接失败</p>
+</blockquote>
+</li>
+<li>rkill list查看</li>
+<li>rkill unblock all 干掉所有软件的block</li>
+<li>wifi-menu 联网</li>
+<li>可以选择一个安装字体 setfont /usr/share/kbd/consolefonts//LatGrkCyr-12x22.psfu.gz</li>
+<li>分区 fdisk -l 查看硬盘</li>
+<li>分区 fdisk /dev/sdx <blockquote>
+<p>p 打印分区<br>g 创建新的分区列表，w保存才写入硬盘<br>n 创建分区 1 创建第一个分区 50G分区大小 Y 去除原格式创建新的磁盘格式<br>mkfs.fat -F32 /dev/sdx 引导分区格式化<br>mkfs.ext4 /dev/sdb 主分区格式<br>mkswap /dev/sdx swap分区<br>swapon /dev/sdx 打开swap分区</p>
+</blockquote>
+</li>
+<li>vim /etc/pacman.conf <blockquote>
+<p>/Color 更换安装字体颜色</p>
+</blockquote>
+</li>
+<li>vim /etc/pacman.d/mirrorlist </li>
+<li>mount /dev/sdx /mnt 挂在到住分区</li>
+<li>mkdir /mnt/boot</li>
+<li>moubt /dev/sdx /mnt/boot 挂载引导分区</li>
+<li>pacstrap /mnt base linux linux-firmware linux内核框架</li>
+<li>genfstab -U /mnt &gt;&gt; /mnt/etc/fstab 生成开机引导设备</li>
+<li>arch-chroot /mnt 进入安装系统</li>
+<li>ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime 调整时间</li>
+<li>hwclock –systohc 同步系统时间</li>
+<li>exit</li>
+<li>vim /mnt/etc/locale.gen 找enus</li>
+<li>arch-chroot /mnt</li>
+<li>locale-gen 本地化</li>
+<li>exit</li>
+<li>vim /mnt/etc/locale.com 写入 LANG=en_US.UTF-8</li>
+<li>vim /mnt/etc/hostname 写入 icek</li>
+<li>vim /mnt/etc/hosts 写入<blockquote>
+<p>127.0.0.1 localhost<br>::1 localhost<br>127.0.0.1 icek.localdomain icek</p>
+</blockquote>
+</li>
+<li>arch-chroot /mnt</li>
+<li>passwd 创建密码</li>
+<li>pacman -S grub efibootmgr intel-ucode os-prober</li>
+<li>mkdir /boot/grub</li>
+<li>grub-mkconfig &gt; /boot/grub/grub.cfg 生成grub配置文件</li>
+<li>uname -m 确认系统架构</li>
+<li>grub-install –target=x86_64-efi –efi-directory=/boot </li>
+<li>pacman -S vim zsh dhcp wpa_supplicant 安装完成重启</li>
+<li>还有一个包是wifi-menu的也要安装</li>
 </ul>
-<p><img src="/images/%E5%A4%87%E4%BB%BD/1.jpg" alt="*"></p>
 
       
       <!-- reward -->
@@ -170,15 +212,13 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/27/web-backup/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/28/arch%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%A4%87%E4%BB%BD/" rel="tag">备份</a></li></ul>
-
 
     </footer>
 
@@ -188,19 +228,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/03/28/i3wm%E9%85%8D%E7%BD%AE/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            i3wm配置
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/03/27/%E6%9D%82%E8%AE%B0-BADCODE/" class="article-nav-link">
+      <a href="/2020/03/28/poybar%E9%85%8D%E7%BD%AE/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">杂记-BADCODE</div>
+        <div class="article-nav-title">poybar配置</div>
       </a>
     
   </nav>
