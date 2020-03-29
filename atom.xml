@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-28T09:54:26.046Z</updated>
+  <updated>2020-03-29T13:13:53.497Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://yoursite.com/2020/03/28/leetcode-01/"/>
     <id>http://yoursite.com/2020/03/28/leetcode-01/</id>
     <published>2020-03-28T09:35:14.000Z</published>
-    <updated>2020-03-28T09:54:26.046Z</updated>
+    <updated>2020-03-29T13:13:53.497Z</updated>
     
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p></blockquote><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>题解的思路是找到数的关系 nums[0]=target-nums[1] nums[0]在target中，返回ture</p><pre><code>def twoSum (nums,target):    lens = len(nums)    j = -1     for i in range(lens):        if (nums.count(target - nums[i]) == 1) &amp; (target - nums[i] == nums[i]):             countinue        else:            j = nums.index(target - nums[i],i+1)            break    if j &gt; 0:        return [i,j]    else:        return []def twoSum(nums, target):    hashmap={}    for i,num in enumerate(nums):        if hashmap.get(target - num) is not None:            return [i,hashmap.get(target - num)]        hashmap[num] = i #这句不能放在if语句之前，解决list中有重复值或target-num=num的情况</code></pre><ul><li>index(x,x+1)是从num1后的序列后找num2</li><li>耗时长1636s 耗时70s</li><li>参考了大神们的解法，通过哈希来求解，这里通过字典来模拟哈希查询的过程。</li><li>个人理解这种办法相较于方法一其实就是字典记录了 num1 和 num2 的值和位置，而省了再查找 num2 索引的步骤</li></ul><pre><code>def twoSum(nums, target):    hashmap={}    for ind,num in enumerate(nums):        hashmap[num] = ind    for i,num in enumerate(nums):        j = hashmap.get(target - num)        if j is not None and i!=j:            return [i,j]</code></pre>]]></content>
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h1><blockquote><p>给定一个整数数组 nums 和一个目标值 target，请你在该数组中找出和为目标值的那 两个 整数，并返回他们的数组下标。<br>你可以假设每种输入只会对应一个答案。但是，你不能重复利用这个数组中同样的元素。<br>示例:<br>给定 nums = [2, 7, 11, 15], target = 9<br>因为 nums[0] + nums[1] = 2 + 7 = 9<br>所以返回 [0, 1]</p></blockquote><h1 id="题解"><a href="#题解" class="headerlink" title="题解"></a>题解</h1><p>题解的思路是找到数的关系 nums[0]=target-nums[1] nums[0]在target中，返回ture</p><pre><code>def twoSum (nums,target):    lens = len(nums)    j = -1     for i in range(lens):        if (nums.count(target - nums[i]) == 1) &amp; (target - nums[i] == nums[i]):             countinue        else:            j = nums.index(target - nums[i],i+1)            break    if j &gt; 0:        return [i,j]    else:        return []def twoSum(nums, target):    hashmap={}    for i,num in enumerate(nums):        if hashmap.get(target - num) is not None:            return [i,hashmap.get(target - num)]        hashmap[num] = i #这句不能放在if语句之前，解决list中有重复值或target-num=num的情况</code></pre><ul><li>index(x,x+1)是从num1后的序列后找num2</li><li>耗时长1636s 耗时70s</li><li>参考了大神们的解法，通过哈希来求解，这里通过字典来模拟哈希查询的过程。</li><li>个人理解这种办法相较于方法一其实就是字典记录了 num1 和 num2 的值和位置，而省了再查找 num2 索引的步骤</li></ul><pre><code>def twoSum(nums, target):    hashmap={}    for ind,num in enumerate(nums):        hashmap[num] = ind    for i,num in enumerate(nums):        j = hashmap.get(target - num)        if j is not None and i!=j:            return [i,j]</code></pre><p>暂停刷题 研究算法 基本功不够</p>]]></content>
     
     <summary type="html">
     
