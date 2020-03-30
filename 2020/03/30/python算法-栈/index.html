@@ -8,7 +8,7 @@
    
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
   <title>
-    冥想 |  iteod&#39;s blog
+    python基本算法 |  iteod&#39;s blog
   </title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   
@@ -31,7 +31,7 @@
   <div id="app">
     <main class="content">
       <section class="outer">
-  <article id="post-冥想" class="article article-type-post" itemscope
+  <article id="post-python算法-栈" class="article article-type-post" itemscope
   itemprop="blogPost" data-scroll-reveal>
 
   <div class="article-inner">
@@ -39,7 +39,7 @@
     <header class="article-header">
        
 <h1 class="article-title sea-center" style="border-left:0" itemprop="name">
-  冥想
+  python基本算法
 </h1>
  
 
@@ -48,12 +48,12 @@
 
     
     <div class="article-meta">
-      <a href="/2020/03/30/%E5%86%A5%E6%83%B3/" class="article-date">
-  <time datetime="2020-03-30T02:20:51.000Z" itemprop="datePublished">2020-03-30</time>
+      <a href="/2020/03/30/python%E7%AE%97%E6%B3%95-%E6%A0%88/" class="article-date">
+  <time datetime="2020-03-30T10:29:10.000Z" itemprop="datePublished">2020-03-30</time>
 </a>
       
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E5%86%A5%E6%83%B3/">冥想</a>
+    <a class="article-category-link" href="/categories/python-%E7%AE%97%E6%B3%95/">python 算法</a>
   </div>
 
       
@@ -63,7 +63,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-quill-pen-line"></i>
             <span class="post-meta-item-text"> 字数统计:</span>
-            <span class="post-count">39字</span>
+            <span class="post-count">530字</span>
         </span>
     </span>
 
@@ -72,7 +72,7 @@
         <span class="post-meta-item-icon">
             <i class="ri-book-open-line"></i>
             <span class="post-meta-item-text"> 阅读时长≈</span>
-            <span class="post-count">1分钟</span>
+            <span class="post-count">2分钟</span>
         </span>
     </span>
 </div>
@@ -97,17 +97,100 @@
       
 
       
-      <h1 id="冥想"><a href="#冥想" class="headerlink" title="冥想"></a>冥想</h1><p><strong>平静是我们应具有的迎接一切生命体验的理想状态</strong></p>
-<ul>
-<li><p>推荐keep的冥想课</p>
-</li>
-<li><p>保持安静</p>
-</li>
-<li><p>保持注意</p>
-</li>
-</ul>
-<p><img src="/images/%E5%86%A5%E6%83%B3/1.jpg" alt="*"></p>
-
+      <h1 id="栈的实现"><a href="#栈的实现" class="headerlink" title="栈的实现"></a>栈的实现</h1><pre><code>
+class Stack(object):                                    // 定义类
+    def __init__(self, limit=10):            // 定义方法
+        self.stack = []                                 // 存放元素
+        self.limit = limit                              // 栈容量极限
+    def push(self, data):                               // 判断入栈
+        if len(self.stack) &gt;= self.limit:        // 判断栈是否溢出
+            print(&#39;StackOverflowError&#39;)
+            pass
+        self.stack.append(data)             // append 函数 ？函数的实现有待研究
+    def pop(self):                    // 定义出栈
+        if self.stack:
+            return self.stack.pop()            //  pop data
+        else:
+            raise IndexError(&#39;pop from an empty stack&#39;) // 空栈不能被弹出
+    def peek(self):                                     //查看堆栈的最上面的元素
+        if self.stack:
+            return self.stack[-1]
+    def is_empty(self):                                 //判断栈是否为空
+        return not bool(self.stack)
+    def size(self):                                     //返回栈的大小
+        return len(self.stack)
+</code></pre><h1 id="单链表"><a href="#单链表" class="headerlink" title="单链表"></a>单链表</h1><pre><code>
+class Node:                                //定义类 
+    def __init__(self, data):                        //方法
+        self.data = data
+        self.next = None
+class Linked_List:
+    def __init__(self):
+        self.head = None
+    def initlist(self,data_list):    #链表初始化函数
+        self.head=Node(data_list[0])   #创建头结点
+        temp=self.head
+        for i in data_list[1:]: #逐个为 data 内的数据创建结点, 建立链表
+            node=Node(i)
+            temp.next=node
+            temp=temp.next
+    def is_empty(self):  #判断链表是否为空
+        if self.head.next==None:
+            print(&quot;Linked_list is empty&quot;)
+            return True
+        else:
+            return False
+    def get_length(self):  #获取链表的长度
+        temp=self.head #临时变量指向队列头部
+        length=0 #计算链表的长度变量
+        while temp!=None:
+            length=length+1
+            temp=temp.next
+        return length #返回链表的长度
+    def insert(self,key,value): #链表插入数据函数
+        if key&lt;0 or key&gt;self.get_length()-1:
+            print(&quot;insert error&quot;)
+        temp=self.head
+        i=0
+        while i&lt;=key: #遍历找到索引值为 key 的结点后, 在其后面插入结点
+            pre=temp
+            temp=temp.next
+            i=i+1
+        node=Node(value)
+        pre.next=node
+        node.next=temp
+    def print_list(self):   #遍历链表，并将元素依次打印出来
+        print(&quot;linked_list:&quot;)
+        temp=self.head
+        new_list=[]
+        while temp is not None:
+            new_list.append(temp.data)
+            temp=temp.next
+        print(new_list)
+    def remove(self,key):  #链表删除数据函数
+        if key&lt;0 or key&gt;self.get_length()-1:
+            print(&quot;insert error&quot;)
+        i=0
+        temp=self.head
+        while temp !=None:  #遍历找到索引值为 key 的结点
+            pre=temp
+            temp=temp.next
+            i=i+1
+            if i==key:
+                pre.next=temp.next
+                temp=None
+                return True
+        pre.next=None
+    def reverse(self): #将链表反转
+        prev = None
+        current = self.head
+        while current:
+            next_node = current.next
+            current.next = prev
+            prev = current
+            current = next_node
+        self.head = prev
+</code></pre>
       
       <!-- reward -->
       
@@ -172,14 +255,14 @@
     <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/30/%E5%86%A5%E6%83%B3/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://yoursite.com/2020/03/30/python%E7%AE%97%E6%B3%95-%E6%A0%88/" alt="微信分享二维码">
     </div>
 </div>
 
 <div id="share-mask"></div>
       
       
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E5%86%A5%E6%83%B3/" rel="tag">冥想</a></li></ul>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python-%E7%AE%97%E6%B3%95/" rel="tag">python 算法</a></li></ul>
 
 
     </footer>
@@ -190,19 +273,10 @@
   
   <nav class="article-nav">
     
-      <a href="/2020/03/30/python%E7%AE%97%E6%B3%95-%E6%A0%88/" class="article-nav-link">
-        <strong class="article-nav-caption">上一篇</strong>
-        <div class="article-nav-title">
-          
-            python基本算法
-          
-        </div>
-      </a>
     
-    
-      <a href="/2020/03/28/leetcode-01/" class="article-nav-link">
+      <a href="/2020/03/30/%E5%86%A5%E6%83%B3/" class="article-nav-link">
         <strong class="article-nav-caption">下一篇</strong>
-        <div class="article-nav-title">leetcode-01</div>
+        <div class="article-nav-title">冥想</div>
       </a>
     
   </nav>
