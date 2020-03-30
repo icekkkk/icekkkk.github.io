@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-29T13:13:53.497Z</updated>
+  <updated>2020-03-30T02:26:43.500Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>冥想</title>
+    <link href="http://yoursite.com/2020/03/30/%E5%86%A5%E6%83%B3/"/>
+    <id>http://yoursite.com/2020/03/30/%E5%86%A5%E6%83%B3/</id>
+    <published>2020-03-30T02:20:51.000Z</published>
+    <updated>2020-03-30T02:26:43.500Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="冥想"><a href="#冥想" class="headerlink" title="冥想"></a>冥想</h1><p><strong>平静是我们应具有的迎接一切生命体验的理想状态</strong></p><ul><li><p>推荐keep的冥想课</p></li><li><p>保持安静</p></li><li><p>保持注意</p></li></ul><p><img src="/images/%E5%86%A5%E6%83%B3/1.jpg" alt="*"></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+      <category term="冥想" scheme="http://yoursite.com/categories/%E5%86%A5%E6%83%B3/"/>
+    
+    
+      <category term="冥想" scheme="http://yoursite.com/tags/%E5%86%A5%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>leetcode-01</title>
@@ -485,32 +511,6 @@
     
     
       <category term="css html" scheme="http://yoursite.com/tags/css-html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>html-css</title>
-    <link href="http://yoursite.com/2020/03/24/html-css/"/>
-    <id>http://yoursite.com/2020/03/24/html-css/</id>
-    <published>2020-03-24T12:32:55.000Z</published>
-    <updated>2020-03-24T14:05:10.247Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="css样式"><a href="#css样式" class="headerlink" title="css样式"></a>css样式</h1><blockquote><p>例：普通样式、链接样式</p></blockquote><pre><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;mate charset=&quot;utf-8&quot;&gt;&lt;title&gt; cainiao&lt;/title&gt;&lt;style type=&quot;text/css&quot;&gt;h1{color:red;}p{color:blue;}&lt;/style&gt;&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;style.css&quot;&gt;&lt;/head&gt;&lt;body&gt;&lt;h1&gt; text&lt;/h1&gt;&lt;p&gt;text&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</code></pre><table><thead><tr><th>样式</th><th align="center">说明</th></tr></thead><tbody><tr><td>内联样式</td><td align="center">在HTML元素中使用”style” 属性,当特殊的样式需要应用到个别元素时，就可以使用内联样式。 使用内联样式的方法是在相关的标签中使用样式属性。样式属性可以包含任何 CSS 属性。以下实例显示出如何改变段落的颜色和左外边距。<code>&lt;p style=&quot;color:blue;margin-left:20px;&quot;&gt;这是一个段落。&lt;/p&gt;</code>背景色属性（background-color）定义一个元素的背景颜色,我们可以使用font-family（字体），color（颜色），和font-size（字体大小）属性来定义字体的样式:使用 text-align（文字对齐）属性指定文本的水平与垂直对齐方式;</td></tr><tr><td>内部样式表</td><td align="center">在HTML文档头部<code>&lt;head&gt;</code> 区域使用<code>&lt;style&gt;</code> 元素 来包含CSS,当单个文件需要特别样式时，就可以使用内部样式表。你可以在<code>&lt;head&gt;</code> 部分通过<code>&lt;style&gt;</code>标签定义内部样式表:</td></tr><tr><td>外部引用</td><td align="center">使用外部 CSS 文件,当样式需要被应用到很多页面的时候，外部样式表将是理想的选择。使用外部样式表，你就可以通过更改一个文件来改变整个站点的外观</td></tr></tbody></table><h1 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h1><p>在HTML 4, 原来支持定义HTML元素样式的标签和属性已被弃用。这些标签将不支持新版本的HTML标签。<br>不建议使用的标签有:<code>&lt;font&gt;, &lt;center&gt;, &lt;strike&gt;</code><br>不建议使用的属性: <code>color 和 bgcolor.</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="html" scheme="http://yoursite.com/categories/html/"/>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
