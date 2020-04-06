@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-03-30T10:45:16.986Z</updated>
+  <updated>2020-04-06T10:03:25.838Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>text</title>
+    <link href="http://yoursite.com/2020/04/06/text/"/>
+    <id>http://yoursite.com/2020/04/06/text/</id>
+    <published>2020-04-06T10:03:25.000Z</published>
+    <updated>2020-04-06T10:03:25.838Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
+      
+    
+    </summary>
+    
+    
+    
+  </entry>
   
   <entry>
     <title>python基本算法</title>
@@ -485,32 +507,6 @@
     
     
       <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>python-补充</title>
-    <link href="http://yoursite.com/2020/03/24/python-%E8%A1%A5%E5%85%85/"/>
-    <id>http://yoursite.com/2020/03/24/python-%E8%A1%A5%E5%85%85/</id>
-    <published>2020-03-24T13:12:12.000Z</published>
-    <updated>2020-03-24T13:44:10.344Z</updated>
-    
-    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="/assets/css/APlayer.min.css"><script src="/assets/js/APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="补充一：-python解释器"><a href="#补充一：-python解释器" class="headerlink" title="补充一： python解释器"></a>补充一： python解释器</h1><p>Linux/Unix的系统上，一般默认的 python 版本为 2.x，我们可以将 python3.x 安装在 /usr/local/python3 目录中。<br>安装完成后，我们可以将路径 /usr/local/python3/bin 添加到您的 Linux/Unix 操作系统的环境变量中，这样您就可以通过 shell 终端输入下面的命令来启动 Python3 。<br><code>$ PATH=$PATH:/usr/local/python3/bin/python3    # 设置环境变量$ python3 --versionPython 3.4.</code><br>在Window系统下你可以通过以下命令来设置Python的环境变量，假设你的Python安装在 C:\Python34 下:<br><code>set path=%path%;C:\python34</code><br>end 关键字<br>关键字end可以用于将结果输出到同一行，或者在输出的末尾添加不同的字符，<code>print(b,end=&#39;,&#39;)</code></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;/assets/css/APlayer.min.css&quot;&gt;&lt;script src=&quot;/assets/js/APlayer.min.js&quot; cla
-      
-    
-    </summary>
-    
-    
-      <category term="python" scheme="http://yoursite.com/categories/python/"/>
-    
-    
-      <category term="python" scheme="http://yoursite.com/tags/python/"/>
     
   </entry>
   
